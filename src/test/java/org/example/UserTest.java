@@ -9,12 +9,12 @@ class UserTest {
 
     @DisplayName("패스워드 초기화한다.")
     @Test
-    void passwordTest() {
+     void passwordTest() {
         // given
         User user = new User();
 
         // when
-        user.initPassword();
+        user.initPassword(new CorrectFixedPasswordGenerator());
 
         // then
         assertThat(user.getPassword()).isNotNull();
