@@ -2,6 +2,10 @@ package org.example;
 
 public class User {
 
+    public String getPassword() {
+        return password;
+    }
+
     private String password;
 
     public void initPassword() {
