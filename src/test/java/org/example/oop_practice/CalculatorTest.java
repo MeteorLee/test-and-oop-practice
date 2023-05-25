@@ -44,7 +44,6 @@ public class CalculatorTest {
     @DisplayName("계산기 연산")
     @ParameterizedTest
     @MethodSource("formulaAndResult")
-    @Test
     void calculateTest(int operand1, String operator, int operand2, int result) {
 
         int calculateResult = Calculator.calculate(operand1, operator, operand2);
