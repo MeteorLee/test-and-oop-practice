@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test_practice;
 
 public class PasswordValidator {
 

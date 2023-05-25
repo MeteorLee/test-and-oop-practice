@@ -1,5 +1,6 @@
-package org.example;
+package org.example.test_practice;
 
+import org.example.test_practice.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

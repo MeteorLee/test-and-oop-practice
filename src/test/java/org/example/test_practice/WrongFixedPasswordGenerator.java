@@ -1,4 +1,6 @@
-package org.example;
+package org.example.test_practice;
+
+import org.example.test_practice.PasswordGenerator;
 
 public class WrongFixedPasswordGenerator implements PasswordGenerator {
     @Override
