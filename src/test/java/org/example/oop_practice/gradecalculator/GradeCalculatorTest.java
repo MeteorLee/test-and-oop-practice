@@ -1,4 +1,4 @@
-package org.example.oop_practice.gradeCalculator;
+package org.example.oop_practice.gradecalculator;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,5 +22,9 @@ public class GradeCalculatorTest {
     //                                                            -->    수강신청 총학점 수       --> 과목(코스)(이수한 과목의 총학점 수 요청)
 
 
+    // 5. 객체들을 포괄하는 타입에 적절한 책임을 할당
+    @Test
+    void calculateGradeTest() {
 
+    }
 }
