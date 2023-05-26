@@ -1,6 +1,9 @@
 package org.example.oop_practice.gradecalculator;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 /**
  * 요구사항
@@ -23,8 +26,15 @@ public class GradeCalculatorTest {
 
 
     // 5. 객체들을 포괄하는 타입에 적절한 책임을 할당
+    @DisplayName("평균 학점을 계산한다.")
     @Test
     void calculateGradeTest() {
+        List<Course> courses = List.of(new Course("OOP", 3, "A+"),
+                new Course("자료구조", 3, "A+"));
 
+        GradeCalculator gradleCalculator = new GradeCalculator(courses);
+        double gradeResult = gradleCalculator.calculateGrade();
+
+        assertThat(gradeResult).isEqualTo(4.5);
     }
 }
