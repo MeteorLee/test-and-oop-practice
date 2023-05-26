@@ -1,6 +1,6 @@
-package org.example.oop_practice;
+package org.example.oop_practice.calculator;
 
-import org.example.oop_practice.calculate.*;
+import org.example.oop_practice.calculator.calculate.*;
 
 import java.util.List;
 

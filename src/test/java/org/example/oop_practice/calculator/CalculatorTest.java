@@ -1,6 +1,7 @@
-package org.example.oop_practice;
+package org.example.oop_practice.calculator;
 
-import org.example.oop_practice.calculate.PositiveNumber;
+import org.example.oop_practice.calculator.Calculator;
+import org.example.oop_practice.calculator.calculate.PositiveNumber;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -10,7 +11,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 /**

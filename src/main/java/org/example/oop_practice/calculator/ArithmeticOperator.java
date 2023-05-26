@@ -1,4 +1,4 @@
-package org.example.oop_practice;
+package org.example.oop_practice.calculator;
 
 import java.util.Arrays;
 
