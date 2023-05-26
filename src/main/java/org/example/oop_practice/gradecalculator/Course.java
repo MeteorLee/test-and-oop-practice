@@ -13,11 +13,15 @@ public class Course {
         this.grade = gradle;
     }
 
+    public double multiplyCreditAndCourseGrade() {
+        return credit * getGradleNumber();
+    }
+
     public int getCredit() {
         return credit;
     }
-
     // 성적의 문자열 -> int로 바꾸기 위해 필요
+
     public double getGradleNumber() {
         double gradeInt = 0;
         switch (this.grade) {
