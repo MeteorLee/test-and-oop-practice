@@ -35,3 +35,35 @@ TDD 기반의 코드로 연습을 진행함
 6. 구현하기
 
 - 참고 : 객체지향 세계에서는 모든 객체가 능동적인 존재
+
+# 배운점
+
+## TDD 기반 개발
+
+1. 테스트 코드를 작성한다.
+2. 일단 테스트가 통과하도록 코드를 작성한다.(return 값을 그냥 4.5, 3 이런 식으로 상수로 줘서 통과하게끔 만든다.)
+3. 리팩토링을 통해서 메소드를 수정하고 테스트를 돌려봄으로써 안정성을 얻을 수 있다.
+4. 객체지향적인 점을 고려하여 리팩토링을 진행한다. (테스트 코드가 있으므로 수정하는 상황에서 코드가 망가질 위험이 굉장히 낮아진다.)
+
+## 객체지향적 개발
+
+### getter()를 통해서 정보를 받아와서 연산을 하는 것은 좋지 않다. (응집도)
+
+예를 들어보자
+```java
+
+mulitipledCreditAndCourseGrade += course.getCredit() + course.getGradleNumber();
+```
+
+- course에서 두개의 정보를 getter()로 받아와서 계산하는 방식은 단점이 있다. 
+
+만약 mulitpleCreditAndCourseGrade를 여러 곳에서 사용한다면 사용하는 곳마다 위의 로직을 작성하여야 한다.
+따라서 mulitpleCreditAndCourseGrade를 가져오는 로직을 변경한다면 모든 곳의 로직을 변경해줘야한다.
+
+```java
+mulitipledCreditAndCourseGrade += course.multiplyCreditAndCourseGrade();
+```
+
+- getter()로 받아오는 것이 아닌 정보를 가진 객체에게 메세지를 보내 해당 객체에서 작업을 수행한 후 정보를 받는 방식으로 변경하는 경우는 단점을 보완할 수 있다.
+
+만약 mulitpleCreditAndCourseGrade를 얻는 로직을 변경하더라도 course의 multiplyCreditAndCourseGrade() 메서드 하나의 로직만을 변경하면 된다.
